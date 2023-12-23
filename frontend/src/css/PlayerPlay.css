@@ -1,0 +1,85 @@
+.playerPlay{
+    height: 100vh;
+}
+
+.playerPlay.questions{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.statusIcon{
+    padding-top: 1em;
+}
+
+.rankDisplay{
+    padding:1.3em 0;
+}
+
+/* .rankDisplay #rank{
+    background-color: white;
+    color: black;    
+    padding: 10px;
+} */
+
+.timeAndImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageDisplay{
+    /* height: 50vh;     */    
+    max-width: 550px;    
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.imageDisplay img{
+    width: 100%;
+}
+
+.scoreDisplay{    
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    margin: auto;
+}
+
+.optionBtn{
+    padding: 10px;
+    /* margin: 10px 1em; */
+    color: white;
+    font-size: 1.2rem;
+}
+
+.optionBtn.btn1{
+    background-color: #228b22;
+    border: 1px solid forestgreen;
+}
+
+.optionBtn.btn2{
+    background-color: #ba0202;
+    border: 1px solid #ba0202;
+}
+
+.optionBtn.btn3{
+    background-color: #366fda;
+    border: 1px solid #366fda;
+}
+
+.optionBtn.btn4{
+    background-color: #f19f06;
+    border: 1px solid #f19f06;
+}
+
+@media(max-width:500px) {
+    .optionsDiv{
+        display: flex;
+        flex-direction: column;
+    }
+}

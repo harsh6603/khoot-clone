@@ -11,7 +11,15 @@ import Quiz from './components/Quiz';
 import Home from './components/Home';
 import MyState from './context/MyState';
 import Lobby from './components/Lobby';
-const socket = io.connect("http://localhost:5000/")
+import AdminSignup from './components/AdminSignup';
+import AdminLogin from './components/AdminLogin';
+import CreatedQuiz from './components/CreatedQuiz';
+import 'react-toastify/dist/ReactToastify.css';
+import QuizState from './context/QuizState';
+import Play from './components/Play';
+import PlayerPlay from './components/PlayerPlay';
+import Gameover from './components/Gameover';
+const socket = io.connect("http://192.168.86.178:5000/")
 
 function App() {
 
@@ -56,12 +64,20 @@ function App() {
       <div className='App'>
         <Router>
           <MyState>
-            <Routes>
-              <Route path='/' element ={<Home socket={socket} />} />
-              <Route path='/join' element ={<Lobby socket={socket} />} />
-              <Route path='/quiz' element={<Admin socket={socket}/>} />
-              <Route path='/quiz/:quizId' element={<Quiz socket={socket} />} />
-            </Routes>
+            <QuizState>
+              <Routes>
+                <Route path='/adminSignup' element={<AdminSignup/>} />
+                <Route path='/adminLogin' element={<AdminLogin/>} />
+                <Route path='/createdQuiz' element={<CreatedQuiz />} />
+                <Route path='/' element ={<Home socket={socket} />} />
+                <Route path='/join' element ={<Lobby socket={socket} />} />
+                <Route path='/quiz' element={<Admin socket={socket}/>} />
+                <Route path='/quiz/:quizId' element={<Quiz socket={socket} />} />  
+                <Route path='/quiz/host/:quizId' element={<Play socket={socket}/>} />            
+                <Route path='/quiz/player' element={<PlayerPlay socket={socket} />} />
+                <Route path='/gameover' element={<Gameover socket={socket} />} />
+              </Routes>
+            </QuizState>
           </MyState>
         </Router>
       </div>

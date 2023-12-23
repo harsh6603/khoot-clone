@@ -1,0 +1,75 @@
+.quiz{
+    background-color: #424476;   
+    height: 100vh;    
+}
+
+.firstDiv{
+    background-color: #262752;   
+    padding: 1em;
+}
+
+.gamePinDiv{
+    /* height: 20vh; */
+    background-color: white;    
+    margin: auto;
+    max-width: 500px;
+    width: 90%;    
+    border-radius: 4px;
+    padding: 1em;
+}
+
+.secondDiv{
+    padding: 1em;
+    display: flex;
+    justify-content: right;
+}
+
+.secondDiv button{
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 4px;
+    border: 1px solid white;
+    background-color: white;
+    /* width: 50px; */
+    cursor: pointer;
+}
+
+.thirdDiv{
+    padding: 1em;
+    margin: auto;
+    max-width: 1200px;
+    width: 90%;    
+}
+
+.playerName{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing:1px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+}
+
+.grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+@media(max-width:700px) {
+    .grid-container{
+        display: block;
+    }
+
+    .thirdDiv{
+        width: 100%;
+    }
+}

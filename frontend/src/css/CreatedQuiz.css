@@ -1,0 +1,29 @@
+/* .createdQuiz{
+    padding-top: 100px;
+} */
+
+.createdQuizContainer{
+    padding-top: 100px;
+    margin: auto;
+    max-width: 1200px;
+    width:90%;
+}
+
+.quizName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    padding: 1em;
+    /* margin: 0.5em 1em; */
+    border-radius: 5px;
+}
+
+.quizName button{
+    background-color: green;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid green;
+    border-radius: 5px;
+}

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import MyContext from '../context/MyContext'
+import "../css/Home.css"
 
 export default function Home() {
 
@@ -9,16 +10,22 @@ export default function Home() {
     const myContext = useContext(MyContext);
 
     return (
-        <div>
-            <h1>Join Game</h1>
-            <input placeholder='Enter name' onChange={(e) => myContext.setPlayerName(e.target.value)} /><br/>
-            <input placeholder='Enter pin' onChange={(e) => myContext.setPlayerGamePin(e.target.value)} /><br/>
-            <button 
-                onClick={() => {navigate("/join")}} 
-            >
-                Join
-            </button>
-            <button onClick={() => {navigate("/quiz")}}>Create Quiz</button>
+        <div className='parentDiv'>
+            <div className='childDiv'>
+                <h1>Join Game</h1>
+                <div className='element'>
+                    <input placeholder='Enter name' onChange={(e) => localStorage.setItem("playerName",e.target.value)} /><br/>
+                </div>
+                <div className='element'>
+                    <input placeholder='Enter pin' onChange={(e) => localStorage.setItem("playerGamePin",e.target.value)} /><br/>
+                </div>
+                <button 
+                    onClick={() => {navigate("/join")}} 
+                >
+                    Join
+                </button>
+                {/* <button onClick={() => {navigate("/quiz")}}>Create Quiz</button> */}            
+            </div>
         </div>
     )
 }

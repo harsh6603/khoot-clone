@@ -1,0 +1,45 @@
+.parentDiv{    
+    background-color: #424476;        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;    
+}
+
+.mainDiv{
+    background-color: #424476;        
+}
+
+.childDiv{
+    background-color: white;    
+    padding: 1%;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.childDiv .element{
+    padding: 2% 0;
+}
+
+.childDiv input{
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.childDiv button{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: black;
+    color: white;
+    border: black;
+    border-radius: 5px;
+}
+
+@media(max-width:7000px) {
+    .parentDiv{
+        padding: 1em;
+    }
+}
